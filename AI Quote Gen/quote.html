@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person_play"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="quote.css" />
+  </head>
+  <body>
+    <a href="https://x.com/ChibuihemDon"><i class="fa-brands fa-x-twitter"></i></a>
+    <section>
+      <div class="btn-1">
+        <div class="btn-1-p">
+          <p>
+            <i class="fa-solid fa-robot"></i>AI-Powered Quote Generator<i
+              class="fa-solid fa-microchip"
+            ></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-container">
+        <div class="text-header">
+          <h1>GREAT MOOD</h1>
+          <h1>GREATER RESULT</h1>
+        </div>
+        <div class="text-body">
+          <p>
+            Elevate your mood from gloomy to bright using this AI quote
+            generator.<br />
+            You can't be productive with this mood.
+          </p>
+        </div>
+      </div>
+
+      <div class="button">
+        <button id="btn" class="btn">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>Generate Quotes<i
+            class="fa-solid fa-wand-magic-sparkles"
+          ></i>
+        </button>
+      </div>
+
+      <div class="footer">
+        <p>Built by UNIZIK Blockchain Lab</p>
+      </div>
+
+      <div id="modal" class="modal1 modal-container">
+        <div id="close" class="close"><i class="fa-solid fa-circle-xmark"></i></div>
+        <div class="modal">
+          <div class="modal-select">
+            <label for="category">What's Your Mood?</label>
+            <select id="category" name="category" class="custom-select">
+              <option value="">Select a mood</option>
+              <option value="inspirational">Inspirational</option>
+              <option value="motivational">Motivational</option>
+              <option value="spiritual">Spiritual</option>
+              <option value="elevating">Elevating</option>
+              <option value="humorous">Humorous</option>
+            </select>
+            <div class="quote-gen">
+              <p class="quote-text"></p>
+            </div>
+            <button class="gen-btn">
+              <span class="btn-text">Generate Quote</span>
+              <span class="btn-icon"><i class="fa-solid fa-wand-sparkles"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="quote.js"></script>
+  </body>
+</html>
+
+<!-- AIzaSyAa7fc2C4JhGtd-9CkluS65mEnWkkJO_mE -->

@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+  
+  body {
+    background-image: url(Images/3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  .fa-brands {
+    color: white;
+    font-size: 42px;
+    position: absolute;
+    top: -30px;
+    right: 70px;
+    cursor: pointer;
+  }
+  
+  section {
+    margin-top: -15px;
+    position: relative;
+  }
+  
+  .btn-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  
+  .btn-1-p {
+    background-color: rgba(254, 163, 82, 0.2);
+    border: 1px solid rgba(255, 249, 240, 0.2);
+    border-radius: 50px;
+  }
+  
+  .btn-1-p p {
+    padding: 16px;
+    color: #fea352;
+  }
+  
+  .fa-solid {
+    padding: 0 15px;
+    font-size: 24px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .text-header {
+    text-align: center;
+  }
+  
+  .text-header :first-child {
+    color: #fff;
+    font-size: 72px;
+  }
+  
+  .text-header :nth-child(2) {
+    color: #fea352;
+    /* text-shadow: 0 0 0.1px #fea352, 0 0 20px #fea352, 0 0 30px #fea352,
+      0 0 40px #fea352; */
+    font-size: 72px;
+    margin-top: -20px;
+  }
+  
+  .text-body {
+    margin-top: 10px;
+  }
+  
+  .text-body p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.125rem;
+  }
+  
+  .button .btn {
+    color: #fff;
+    background-color: #fea352;
+    padding: 16px 8px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    box-shadow: 0 0 10px #fea352, 0 0 20px #fea352, 0 0 30px #fea352;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button .btn:hover {
+    box-shadow: 0 0 15px #fea352, 0 0 25px #fea352, 0 0 35px #fea352;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .footer p {
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+  }
+  
+  .modal-container{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+  }
+  
+  .modal-container.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .close{
+    position: absolute;
+    color: #fea352;
+    top: 5.625rem;
+    right: 22.5rem;
+    z-index: 99;
+    cursor: pointer;
+  }
+  
+  .modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 99;
+  }
+  
+  .modal {
+    margin-top: 3.5rem;
+    width: 50%;
+    height: 25rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 20px;
+  }
+  
+  .modal-select {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  .custom-select {
+    background-color: #fea352;
+    width: 80%;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    /* appearance: none;
+    -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(254, 163, 82, 0.6);
+  }
+  
+  .custom-select:focus {
+    background-color: #ffb566; /* slightly lighter orange */
+    box-shadow: 0 0 10px rgba(254, 163, 82, 0.8);
+  }
+  
+  label {
+    font-size: 24px;
+    font-weight: 700;
+    color: #52391e; 
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .modal-select .gen-btn {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 16px;
+    color: white;
+    background-color: #fea352;
+    border: none;
+    border-radius: 10px;
+    transform: translateY(4rem);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn-icon i{
+    transform: translate(-10px, 1px);
+    font-size: 18px;
+  }
+  
+  .btn-text, .btn-icon{
+    transition: transform .3s ease;
+  }
+  
+  .modal-select .gen-btn:hover .btn-text{
+    transform: translateX(-4px);
+  }
+  
+  .modal-select .gen-btn:hover .btn-icon{
+    transform: translateX(4px);
+  }
+  
+  .quote-gen{
+    max-width: 80%;
+    width: 80%;
+    height: 8rem;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px rgba(254, 163, 82, 0.5);
+    padding: 1rem;
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+  
+  .quote-gen p{
+    color: #52391e;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  
+  @media only screen and (max-width: 480px){
+    section{
+      /* transform: translateY(6rem); */
+      overflow: hidden;
+    }
+  
+    .btn-1{
+      margin-top: 100px;
+    }
+  
+    .btn-1-p p{
+      padding: .8rem;
+      font-size: .8rem;
+    }
+    .fa-solid{
+      font-size: 1rem;
+    }
+    .fa-brands{
+      top: 1.5rem;
+      right: 1rem;
+      font-size: 1.8rem;
+    }
+    .text-header{
+      line-height: 1.4;
+    }
+    .text-header :first-child{
+      font-size: 2.5rem;
+    }
+    .text-header :nth-child(2){
+      font-size: 2.5rem;
+    }
+    .text-body p{
+      font-size: .9rem;
+      padding: .5rem;
+    }
+    .button .btn{
+      padding: 1rem 0.5rem;
+      font-size: 1.125rem;
+    }
+    .footer p{
+      font-size: .8rem;
+    }
+    .close{
+      right: 1.5rem;
+    }
+    .modal{
+      width: 90%;
+      height: 30rem;
+    }
+    .modal-select .gen-btn{
+      transform: translateY(7rem);
+    }
+    .quote-gen{
+      transform: translateY(2rem);
+      height: 10rem;
+    }
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 579px){
+    section{
+      /* transform: translateY(4rem); */
+      overflow: hidden;
+    }
+    .fa-brands{
+      top: 1.25rem;
+      right: 1rem;
+      font-size: 2rem;
+    }
+    .btn-1{
+      margin-top: 100px;
+    }
+    .text-header{
+      line-height: 1.3;
+    }
+    .text-header :first-child{
+      font-size: 3rem;
+    }
+    .text-header :nth-child(2){
+      font-size: 3rem;
+    }
+    .text-body p{
+      font-size: 1rem;
+      padding: .5rem;
+    }
+    .button .btn{
+      padding: 1rem 0.5rem;
+      font-size: 1.125rem;
+    }
+    .close{
+      right: 3rem;
+    }
+    .modal{
+      width: 80%;
+      height: 30rem;
+    }
+    .modal-select .gen-btn{
+      transform: translateY(7rem);
+    }
+    .quote-gen{
+      transform: translateY(2rem);
+      height: 10rem;
+    }
+  }
+  
+  @media (min-width: 579px) and (max-width: 767.98px){
+    section{
+      /* transform: translateY(3.5rem); */
+      overflow: hidden;
+    }
+    .fa-brands{
+      top: 1.25rem;
+      right: 1rem;
+      font-size: 2rem;
+    }
+    .btn-1{
+      margin-top: 100px;
+    }
+    .text-header{
+      line-height: 1.3;
+    }
+    .text-header :first-child{
+      font-size: 3.5rem;
+    }
+    .text-header :nth-child(2){
+      font-size: 3.5rem;
+    }
+    .text-body p{
+      font-size: 1rem;
+    }
+    .button .btn{
+      padding: 1rem 0.5rem;
+      font-size: 1.125rem;
+    }
+    .close{
+      right: 3rem;
+    }
+    .modal{
+      width: 65%;
+      height: 30rem;
+    }
+    .modal-select .gen-btn{
+      transform: translateY(7rem);
+    }
+    .quote-gen{
+      transform: translateY(2rem);
+      height: 10rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 934px){
+    section{
+      /* transform: translateY(2.5rem); */
+      overflow: hidden;
+    }
+    .fa-brands{
+      top: 20px;
+      font-size: 2rem;
+    }
+    .btn-1{
+      margin-top: 100px;
+    }
+    .text-header :first-child{
+      font-size: 4.25rem;
+    }
+    .text-header :nth-child(2){
+      font-size: 4.25rem;
+    }
+    .text-body p{
+      font-size: 1.125rem;
+    }
+    .button .btn{
+      padding: 1rem 0.5rem;
+      font-size: 1.125rem;
+    }
+    .close{
+      right: 6rem;
+    }
+    
+    .modal{
+      width: 60%;
+      height: 30rem;
+    }
+    .modal-select .gen-btn{
+      transform: translateY(7rem);
+    }
+    .quote-gen{
+      transform: translateY(2rem);
+      height: 10rem;
+    }
+  }
+  
+  @media (min-width: 934px) and (max-width: 991.98px){
+    .fa-brands{
+      top: -30px;
+    }
+    .btn-1{
+      margin-top: 50px;
+     }
+    .close{
+      right: 12rem;
+    }
+    .modal{
+      height: 30rem;
+    }
+    .modal-select .gen-btn{
+      transform: translateY(7rem);
+    }
+    .quote-gen{
+      transform: translateY(2rem);
+      height: 10rem;
+    }
+  }
+  
+  @media only screen and (min-width: 991.98px) and (max-width: 1025px){
+    .close{
+      right: 12rem;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 1025px) and (max-width: 1440px){
+    .close{
+      right: 19rem;
+    }
+  }

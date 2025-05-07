@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UBL Bootcamp HTML Project</title>
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- My font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- internal styling -->
+    <style>
+      *{
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 24px;
+      }
+      .img-section{
+        text-align: center;
+      }
+      textarea{
+        resize: none;
+      }
+      .fa-brands{
+        font-size: 32px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="header-section">
+      <h1 style="text-align: center;">MY PERSONAL PORTFOLIO</h1>
+      <div class="img-section">
+        <img src="Images/Me.jpg" alt="Image of Don-Michael" width="200px" height="200px" style="border-radius: 50%; border: 5px dashed black;">
+      </div>
+      
+      <p class="name">I am Don-Michael, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore repudiandae impedit nemo ipsum velit earum rem laborum adipisci id sit.</p>
+      <button>Read more</button>
+    </div>
+
+    <!-- Skill section -->
+     <div class="skill-section">
+      <h1 style="text-align: center;">MY SKILLS</h1>
+      <p>HTML <progress value="85" max="100"></progress></p>
+      <p>CSS <progress value="75" max="100"></progress></p>
+      <p>JavaScript <progress value="60" max="100"></progress></p>
+      <p>React <progress value="35" max="100"></progress></p>
+      <p>Easyworship <progress value="82" max="100"></progress></p>
+      <p>Canva <progress value="80" max="100"></progress></p>
+     </div>
+
+     <!-- Contact section -->
+      <div class="contact-section">
+        <h1 style="text-align: center;">CONTACT ME</h1>
+        <form action="#">
+          <label for="username">Name</label>
+          <input type="text" id="username" placeholder="username"><br><br>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="youremail@gmail.com"><br><br>
+          <textarea name="" id="message" rows="4" cols="20" placeholder="Send a message"></textarea><br>
+          <button>Submit</button>
+        </form>
+
+        <!-- Icons -->
+        <h3>Follow me</h3>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+      <!-- Footer section -->
+       <div class="footer-section">
+        <p style="text-align: center;">© 2025 My Portfolio. All rights reserved.</p>
+       </div>
+  </body>
+</html>
